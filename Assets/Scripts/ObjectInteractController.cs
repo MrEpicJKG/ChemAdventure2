@@ -15,6 +15,8 @@ public class ObjectInteractController : MonoBehaviour
     private GameObject player;
     private GameObject myIconObj;
     private bool canBeTapped = false;
+    private Item myItem;
+    private InventoryManager invManager;
 
     private enum ObjectType { Door, Stairs, Loot, LootContainer}
     // Start is called before the first frame update
@@ -23,6 +25,8 @@ public class ObjectInteractController : MonoBehaviour
         myIconObj = transform.GetChild(0).gameObject;
         myIconObj.SetActive(false);
         player = GameObject.FindGameObjectWithTag("Player");
+        myItem = GetComponent<Item>();
+        invManager = player.GetComponent<InventoryManager>();
     }
 
 	private void Update()
@@ -46,6 +50,10 @@ public class ObjectInteractController : MonoBehaviour
         {
             if (objType == ObjectType.Loot)
             {
+                if(myItem != null)
+                {
+                    invManager.AddItemToInv(myItem);
+				}
                 //Add to player inventory
             }
             else if (objType == ObjectType.LootContainer)

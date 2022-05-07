@@ -22,6 +22,9 @@ public class InventoryManager : MonoBehaviour
     public bool printIngredents = false;
     public bool printChems = false;
 
+    [HideInInspector] public Item primEquippedWeap;
+    [HideInInspector] public Item secEquippedWeap;
+
     [HideInInspector] public enum ItemType { Weapon, Healing, Junk, Quest, Ammo, Ingredent, Chem};
     [HideInInspector] public enum WeapType { None, Melee_Blade, Melee_Blunt, Ranged_Gun};
     [HideInInspector] public enum AmmoType { None, _9mm, _556, _762};

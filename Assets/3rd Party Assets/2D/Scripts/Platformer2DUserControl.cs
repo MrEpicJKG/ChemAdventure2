@@ -8,7 +8,10 @@ namespace UnityStandardAssets._2D
     public class Platformer2DUserControl : MonoBehaviour
     {
         private PlatformerCharacter2D m_Character;
-        private bool m_Jump;
+        [HideInInspector] public bool m_Jump;
+        [HideInInspector] public bool shouldGoLeft;
+        [HideInInspector] public bool shouldGoRight;
+        [HideInInspector] public bool shouldCrouch;
 
 
         private void Awake()
@@ -31,21 +34,75 @@ namespace UnityStandardAssets._2D
                     m_Jump = false;
 				}
             }
+
+            //if (!shouldGoLeft)
+            //{
+                // Read the jump input in Update so button presses aren't missed.
+                if (Input.GetKeyDown(KeyCode.A) == true || CrossPlatformInputManager.GetButtonDown("Left"))
+                {
+                    shouldGoLeft = true;
+                    shouldGoRight = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.A) == true || CrossPlatformInputManager.GetButtonUp("Left"))
+                {
+                    shouldGoLeft = false;
+                }
+            //}
+
+           // if (!shouldGoRight)
+           // {
+                // Read the jump input in Update so button presses aren't missed.
+                if (Input.GetKeyDown(KeyCode.D) == true || CrossPlatformInputManager.GetButtonDown("Right"))
+                {
+                    shouldGoRight = true;
+                    shouldGoLeft = false;
+                }
+                else if (Input.GetKeyUp(KeyCode.D) == true || CrossPlatformInputManager.GetButtonUp("Right"))
+                {
+                    shouldGoRight = false;
+                }
+           // }
+
+            if (!shouldCrouch)
+            {
+                // Read the jump input in Update so button presses aren't missed.
+                if (Input.GetKeyDown(KeyCode.S) == true || CrossPlatformInputManager.GetButtonDown("Crouch"))
+                {
+                    if(shouldCrouch == true)
+                    {
+                        shouldCrouch = false;
+					}
+                    else
+                    {
+                        shouldCrouch = true;
+					}
+                }
+            }
+
         }
 
 
         private void FixedUpdate()
         {
             // Read the inputs.
-            bool crouch = false;
-            if (Input.GetKey(KeyCode.LeftControl) == true || Input.GetKey(KeyCode.S) == true || Input.GetKey(KeyCode.DownArrow) == true)
+            float h = 0;
+            if(shouldGoRight == true)
             {
-                crouch = true;
-            }
-            float h = CrossPlatformInputManager.GetAxis("Horizontal");
+                h = 1;
+			}
+            else if(shouldGoLeft == true)
+            {
+                h = -1;
+			}
+            else
+            {
+                h = 0;
+			}
             // Pass all parameters to the character control script.
-            m_Character.Move(h, crouch, m_Jump);
+            m_Character.Move(h, shouldCrouch, m_Jump);
+            print("h: " + h.ToString() + "   Left: " + shouldGoLeft + "   Right: " + shouldGoRight + "   Crouch: " + shouldCrouch.ToString() + "   Jump: " + m_Jump);
             m_Jump = false;
+            shouldCrouch = false;
         }
     }
 }
