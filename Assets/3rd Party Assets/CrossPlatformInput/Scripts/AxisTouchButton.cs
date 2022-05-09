@@ -16,6 +16,8 @@ namespace UnityStandardAssets.CrossPlatformInput
 		AxisTouchButton m_PairedWith; // Which button this one is paired with
 		CrossPlatformInputManager.VirtualAxis m_Axis; // A reference to the virtual axis as it is in the cross platform input
 
+		private bool pointerIsUp = true;
+
 		void OnEnable()
 		{
 			if (!CrossPlatformInputManager.AxisExists(axisName))
@@ -30,6 +32,17 @@ namespace UnityStandardAssets.CrossPlatformInput
 			}
 			FindPairedButton();
 		}
+
+		private void Update()
+		{
+			if(pointerIsUp == true && m_Axis.GetValue != 0)
+			{
+				m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, 0, responseSpeed * Time.deltaTime));
+			}
+			print("Horiz Axis Value: " + m_Axis.GetValue);
+		}
+
+
 
 		void FindPairedButton()
 		{
@@ -64,12 +77,14 @@ namespace UnityStandardAssets.CrossPlatformInput
 			}
 			// update the axis and record that the button has been pressed this frame
 			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, axisValue, responseSpeed * Time.deltaTime));
+			pointerIsUp = false;
 		}
 
 
 		public void OnPointerUp(PointerEventData data)
 		{
 			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, 0, responseSpeed * Time.deltaTime));
+			pointerIsUp = true;
 		}
 	}
 }
