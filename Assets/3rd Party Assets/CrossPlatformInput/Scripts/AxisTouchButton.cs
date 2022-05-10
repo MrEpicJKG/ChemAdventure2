@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityStandardAssets._2D;
 
 namespace UnityStandardAssets.CrossPlatformInput
 {
@@ -17,6 +18,8 @@ namespace UnityStandardAssets.CrossPlatformInput
 		CrossPlatformInputManager.VirtualAxis m_Axis; // A reference to the virtual axis as it is in the cross platform input
 
 		private bool pointerIsUp = true;
+		private TouchInputManager tim;
+		
 
 		void OnEnable()
 		{
@@ -30,37 +33,50 @@ namespace UnityStandardAssets.CrossPlatformInput
 			{
 				m_Axis = CrossPlatformInputManager.VirtualAxisReference(axisName);
 			}
-			FindPairedButton();
+
+			tim = GameObject.Find("GameController").GetComponent<TouchInputManager>();
+
+			
+			//FindPairedButton();
 		}
 
 		private void Update()
 		{
-			if(pointerIsUp == true && m_Axis.GetValue != 0)
+			if(pointerIsUp == true)
 			{
-				m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, 0, responseSpeed * Time.deltaTime));
+				//if (m_Axis.GetValue != 0)
+				//{
+				//	m_Axis.Update(/*Mathf.MoveTowards(m_Axis.GetValue,*/ 0/*, responseSpeed * Time.deltaTime)*/);
+				//}
+				tim.axis = 0;
 			}
-			print("Horiz Axis Value: " + m_Axis.GetValue);
+			//else //pointerIsUp == false
+			//{
+			//	//m_Axis.Update(/*Mathf.MoveTowards(m_Axis.GetValue, */axisValue/*, responseSpeed * Time.deltaTime)*/);
+			//	tim.axis = axisValue;
+			//}
+			print("Horiz Axis Value: " + tim.axis);
 		}
 
 
 
-		void FindPairedButton()
-		{
-			// find the other button witch which this button should be paired
-			// (it should have the same axisName)
-			var otherAxisButtons = FindObjectsOfType(typeof(AxisTouchButton)) as AxisTouchButton[];
+		//void FindPairedButton()
+		//{
+		//	// find the other button witch which this button should be paired
+		//	// (it should have the same axisName)
+		//	var otherAxisButtons = FindObjectsOfType(typeof(AxisTouchButton)) as AxisTouchButton[];
 
-			if (otherAxisButtons != null)
-			{
-				for (int i = 0; i < otherAxisButtons.Length; i++)
-				{
-					if (otherAxisButtons[i].axisName == axisName && otherAxisButtons[i] != this)
-					{
-						m_PairedWith = otherAxisButtons[i];
-					}
-				}
-			}
-		}
+		//	if (otherAxisButtons != null)
+		//	{
+		//		for (int i = 0; i < otherAxisButtons.Length; i++)
+		//		{
+		//			if (otherAxisButtons[i].axisName == axisName && otherAxisButtons[i] != this)
+		//			{
+		//				m_PairedWith = otherAxisButtons[i];
+		//			}
+		//		}
+		//	}
+		//}
 
 		void OnDisable()
 		{
@@ -71,20 +87,24 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 		public void OnPointerDown(PointerEventData data)
 		{
-			if (m_PairedWith == null)
-			{
-				FindPairedButton();
-			}
+			//if (m_PairedWith == null)
+			//{
+			//	FindPairedButton();
+			//}
 			// update the axis and record that the button has been pressed this frame
-			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, axisValue, responseSpeed * Time.deltaTime));
+			//m_Axis.Update(/*Mathf.MoveTowards(m_Axis.GetValue, */axisValue/*, responseSpeed * Time.deltaTime)*/);
+			tim.axis = axisValue;
 			pointerIsUp = false;
+			print("########## Pointer Down Detected in Event");
 		}
 
 
 		public void OnPointerUp(PointerEventData data)
 		{
-			m_Axis.Update(Mathf.MoveTowards(m_Axis.GetValue, 0, responseSpeed * Time.deltaTime));
+			//m_Axis.Update(/*Mathf.MoveTowards(m_Axis.GetValue, */0/*, responseSpeed * Time.deltaTime)*/);
+			tim.axis = 0;
 			pointerIsUp = true;
+			print("########## Pointer Up Detected in Event");
 		}
 	}
 }
