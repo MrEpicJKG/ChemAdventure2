@@ -194,7 +194,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		public class VirtualAxis
 		{
 			public string name { get; private set; }
-			private float m_Value;
+			public float m_Value;
 			public bool matchWithInputManager { get; private set; }
 
 

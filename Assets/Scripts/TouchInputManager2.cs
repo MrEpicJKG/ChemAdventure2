@@ -52,6 +52,7 @@ public class TouchInputManager2 : MonoBehaviour
         {
             characterControl.Move(horizInput, shouldCrouch, shouldJump);
             shouldJump = false;
+            //print("Horiz: " + horizInput);
         }
 	}
 
@@ -126,7 +127,7 @@ public class TouchInputManager2 : MonoBehaviour
 
     private void Move()
     {
-        float HInput = CrossPlatformInputManager.GetAxis("Horizontal");
+        float HInput = joystick.m_HorizontalVirtualAxis.GetValue;//CrossPlatformInputManager.GetAxis("Horizontal");
         if(HInput < -minJoystickMoveThresholdPrcnt || HInput > minJoystickMoveThresholdPrcnt)
         {
             horizInput = HInput;

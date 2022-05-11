@@ -1145,8 +1145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.49997902}
-  m_SizeDelta: {x: 69.4509, y: 7.4254}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 69.4509, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &104731771
 MonoBehaviour:
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00c3c865782347f41b6358d9fba14b48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementRange: 100
+  MovementRange: 220
   axesToUse: 1
   horizontalAxisName: Horizontal
   verticalAxisName: Vertical
@@ -3539,8 +3539,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -355.7426, y: -233.96193}
-  m_SizeDelta: {x: 255.1548, y: 26.5361}
+  m_AnchoredPosition: {x: -355, y: -235}
+  m_SizeDelta: {x: 250, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &605360817
 MonoBehaviour:
@@ -7109,7 +7109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minJoystickMoveThresholdPrcnt: 0.1
-  joystickSafetyZoneSize: {x: 0, y: 0}
+  joystickSafetyZoneSize: {x: 600, y: 800}
   shouldJump: 0
   shouldCrouch: 0
   attkDelaySecs: 0.1
