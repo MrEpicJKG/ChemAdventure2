@@ -9,6 +9,7 @@ public class TouchInputManager2 : MonoBehaviour
 {
     [SerializeField] [Range(0.01f, 0.99f)] private float minJoystickMoveThresholdPrcnt = 0.1f;
     [SerializeField] private Vector2 joystickSafetyZoneSize;
+    [SerializeField] private float moveSpeedMult = 0.9f;
     
 
     [HideInInspector] public bool shouldJump = false;
@@ -130,7 +131,7 @@ public class TouchInputManager2 : MonoBehaviour
         float HInput = joystick.m_HorizontalVirtualAxis.GetValue;//CrossPlatformInputManager.GetAxis("Horizontal");
         if(HInput < -minJoystickMoveThresholdPrcnt || HInput > minJoystickMoveThresholdPrcnt)
         {
-            horizInput = HInput;
+            horizInput = HInput * moveSpeedMult;
 		}
         else
         {
