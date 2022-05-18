@@ -45,9 +45,12 @@ public class UIInventoryManager : MonoBehaviour
     private List<Item> chemItems = new List<Item>();
     
     private enum Tab { All, Weaps, Health, Ammo, Chems, Ingredents, Quest, Junk};
+
+    private GameManager manager;
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.Find("GameController").GetComponent<GameManager>();
         RefreshUI();
     }
 
@@ -219,59 +222,67 @@ public class UIInventoryManager : MonoBehaviour
     //Button Events
     public void OnPrimaryEquipClk()
     {
-
+        manager.clickCapturedByUI = true;
 	}
 
     public void OnSecondaryEquipClk()
     {
-
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnAllTabClk()
     {
         currTab = Tab.All;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnWeapTabClk()
     {
         currTab = Tab.Weaps;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnHealthTabClk()
     {
         currTab = Tab.Health;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnAmmoTabClk()
     {
         currTab = Tab.Ammo;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnChemTabClk()
     {
         currTab = Tab.Chems;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnIngTabClk()
     {
         currTab = Tab.Ingredents;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnQuestTabClk()
     {
         currTab = Tab.Quest;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 
     public void OnJunkTabClk()
     {
         currTab = Tab.Junk;
         RefreshUI();
-	}
+        manager.clickCapturedByUI = true;
+    }
 }

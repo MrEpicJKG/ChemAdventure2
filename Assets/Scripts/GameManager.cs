@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public bool isGameRunning = true;
+    public bool clickCapturedByControls = false;
+    public bool clickCapturedByInteractScript = false;
+    public bool clickCapturedByUI = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,4 +19,11 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+	private void LateUpdate()
+	{
+        clickCapturedByInteractScript = false;
+        clickCapturedByControls = false;
+        clickCapturedByUI = false;
+	}
 }
