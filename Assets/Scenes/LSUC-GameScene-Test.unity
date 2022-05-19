@@ -774,7 +774,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.068932906, y: 0.6309715}
-  m_ConnectedAnchor: {x: 0.15762043, y: 0.047320724}
+  m_ConnectedAnchor: {x: 0.15762043, y: 0.047320962}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -881,7 +881,7 @@ SpriteRenderer:
   m_SortingLayer: -3
   m_SortingOrder: -4
   m_Sprite: {fileID: -5003875320480979326, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2449,7 +2449,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.068932906, y: 0.6309715}
-  m_ConnectedAnchor: {x: 0.15762043, y: 0.047320724}
+  m_ConnectedAnchor: {x: 0.15762043, y: 0.047320962}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -4485,7 +4485,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0.041999895, y: -0.38500002}
-  m_ConnectedAnchor: {x: 0.2119999, y: 0.5250001}
+  m_ConnectedAnchor: {x: 0.2119999, y: 0.52499986}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -5128,7 +5128,7 @@ SpriteRenderer:
   m_SortingLayer: -3
   m_SortingOrder: -2
   m_Sprite: {fileID: 3454579079869548997, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6531,7 +6531,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.05871797, y: 0.42604288}
-  m_ConnectedAnchor: {x: 0.12849665, y: -0.72378767}
+  m_ConnectedAnchor: {x: 0.23510933, y: -0.7502626}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -6617,7 +6617,7 @@ SpriteRenderer:
   m_SortingLayer: -3
   m_SortingOrder: -1
   m_Sprite: {fileID: 7160610969144966031, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7737,7 +7737,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1521773117
   m_SortingLayer: -3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 5879728651449940139, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8217,7 +8217,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.031467132, y: 0.5672194}
-  m_ConnectedAnchor: {x: 0.027700245, y: -0.5655859}
+  m_ConnectedAnchor: {x: -0.09541267, y: -0.5988099}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -8323,7 +8323,7 @@ SpriteRenderer:
   m_SortingLayer: -3
   m_SortingOrder: -2
   m_Sprite: {fileID: -9560715602532761, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -8970,7 +8970,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.009501457, y: 0.32437664}
-  m_ConnectedAnchor: {x: 0.10349846, y: 0.9243768}
+  m_ConnectedAnchor: {x: 0.10349846, y: 0.92437655}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -9050,7 +9050,7 @@ SpriteRenderer:
   m_SortingLayer: -3
   m_SortingOrder: -3
   m_Sprite: {fileID: 227878520078465411, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -9472,7 +9472,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276094979}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.03, y: -3.96, z: 0}
+  m_LocalPosition: {x: 8.972, y: -5.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 806917334}
@@ -10833,7 +10833,7 @@ SpriteRenderer:
   m_SortingLayer: -3
   m_SortingOrder: -4
   m_Sprite: {fileID: -4241680028663000472, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11309,7 +11309,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.05871797, y: 0.42604288}
-  m_ConnectedAnchor: {x: 0.12849665, y: -0.72378767}
+  m_ConnectedAnchor: {x: 0.10669136, y: -0.72182226}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -11651,7 +11651,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.009501457, y: 0.32437664}
-  m_ConnectedAnchor: {x: 0.10349846, y: 0.9243768}
+  m_ConnectedAnchor: {x: 0.10349846, y: 0.92437655}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -12716,7 +12716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813458473}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.973654, y: -4.26, z: 0}
+  m_LocalPosition: {x: 8.621, y: -4.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1916001000}
@@ -12861,9 +12861,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1521773117
   m_SortingLayer: -3
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 5879728651449940139, guid: bfa5cd19695a41a4ca207313925d32db, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -13238,7 +13238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849691943}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.63, y: -5.99, z: 0}
+  m_LocalPosition: {x: 7.391, y: -6.07, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 826074217}
@@ -14639,7 +14639,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: -0.031467132, y: 0.5672194}
-  m_ConnectedAnchor: {x: 0.027700245, y: -0.5655859}
+  m_ConnectedAnchor: {x: -0.044911083, y: -0.5727531}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
