@@ -32,7 +32,7 @@ public class TouchInputManager2 : MonoBehaviour
         joystick = GameObject.Find("MobileJoystick").GetComponentInChildren<Joystick>();
         initJoyPos = joystick.transform.position;
         manager = GameObject.Find("GameController").GetComponent<GameManager>();
-        characterControl = GameObject.Find("Player").GetComponent<PlatformerCharacter2D>();
+        characterControl = GameObject.Find("PlayerRoot").GetComponent<PlatformerCharacter2D>();
     }
 
     // Update is called once per frame

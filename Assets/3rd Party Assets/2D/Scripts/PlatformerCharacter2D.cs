@@ -6,6 +6,7 @@ namespace UnityStandardAssets._2D
 {
     public class PlatformerCharacter2D : MonoBehaviour
     {
+        [SerializeField] private bool useNewPlayer = true;
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -24,8 +25,8 @@ namespace UnityStandardAssets._2D
         private void Awake()
         {
             // Setting up references.
-            m_GroundCheck = transform.Find("GroundCheck");
-            m_CeilingCheck = transform.Find("CeilingCheck");
+            m_GroundCheck = transform.Find("GameParts").Find("GroundCheck");
+            m_CeilingCheck = transform.Find("GameParts").Find("CeilingCheck");
             m_Rigidbody2D = GetComponent<Rigidbody2D>();
             m_Anim = GetComponent<Animator>();
         }

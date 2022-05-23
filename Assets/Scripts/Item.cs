@@ -47,7 +47,7 @@ public class Item : MonoBehaviour
     [HideInInspector] public enum QuestType { GetItems, ClearEnemiesFromRoom, TalkToNPC};
     void Awake()
     {
-        invManager = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryManager>();
+        invManager = GameObject.Find("PlayerRoot").GetComponent<InventoryManager>();
         //Assign an unused id to new items
         itemID = invManager.allItemIds.Count;
         uiInvManager = GameObject.Find("GameController").GetComponent<UIInventoryManager>();

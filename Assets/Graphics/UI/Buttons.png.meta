@@ -73,7 +73,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -158,9 +158,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 118
-        width: 60
-        height: 41
+        y: 220
+        width: 120
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,10 +178,10 @@ TextureImporter:
       name: Buttons_1
       rect:
         serializedVersion: 2
-        x: 61
-        y: 107
-        width: 44
-        height: 52
+        x: 137
+        y: 219
+        width: 90
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,10 +199,10 @@ TextureImporter:
       name: Buttons_2
       rect:
         serializedVersion: 2
-        x: 107
-        y: 107
-        width: 44
-        height: 52
+        x: 241
+        y: 220
+        width: 122
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,10 +220,10 @@ TextureImporter:
       name: Buttons_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 107
-        width: 60
-        height: 52
+        x: 0
+        y: 111
+        width: 121
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,10 +241,10 @@ TextureImporter:
       name: Buttons_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 62
-        width: 60
-        height: 51
+        x: 271
+        y: 113
+        width: 120
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -262,10 +262,10 @@ TextureImporter:
       name: Buttons_5
       rect:
         serializedVersion: 2
-        x: 61
-        y: 54
-        width: 60
-        height: 52
+        x: 0
+        y: 2
+        width: 120
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -283,10 +283,10 @@ TextureImporter:
       name: Buttons_6
       rect:
         serializedVersion: 2
-        x: 122
-        y: 54
-        width: 60
-        height: 52
+        x: 126
+        y: 2
+        width: 120
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -304,10 +304,10 @@ TextureImporter:
       name: Buttons_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 51
+        x: 256
+        y: 2
+        width: 120
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -317,27 +317,6 @@ TextureImporter:
       bones: []
       spriteID: 0d1e9eb08b05ef2d0800000000000000
       internalID: -3243065930256096816
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Buttons_8
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 0
-        width: 60
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c11b7ca7969636b0800000000000000
-      internalID: -5316896731886317114
       vertices: []
       indices: 
       edges: []
