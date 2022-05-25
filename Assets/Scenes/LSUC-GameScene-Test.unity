@@ -9476,6 +9476,7 @@ GameObject:
   - component: {fileID: 1234500300}
   - component: {fileID: 1234500303}
   - component: {fileID: 1234500304}
+  - component: {fileID: 1234500305}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -9605,6 +9606,29 @@ MonoBehaviour:
   playerShoeRends:
   - {fileID: 369109192}
   - {fileID: 1361238965}
+--- !u!114 &1234500305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234500299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd0e093a5017e24eb31c70ed7f883ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalTimeMult: 1
+  currTimeInGameMin: 270
+  flashlightOnTime: 1230
+  flashlightOffTime: 360
+  sunriseStartTime: 300
+  sunsetStartTime: 1200
+  riseSetDuration: 80
+  lightMinIntensity: 0.1
+  globalLight: {fileID: 1065435873}
+  outsideLight: {fileID: 1556026916}
+  flashLight: {fileID: 1525113008}
 --- !u!1 &1263688416
 GameObject:
   m_ObjectHideFlags: 0
