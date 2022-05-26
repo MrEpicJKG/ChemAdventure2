@@ -93,7 +93,7 @@ MonoBehaviour:
   - {x: -0.658, y: -0.03, z: 0}
   - {x: -0.6426816, y: -0.102340795, z: 0}
   - {x: -0.611, y: -0.166, z: 0}
---- !u!1 &4236890431367387891
+--- !u!1 &2126508711
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,23 +101,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7616538091680174337}
+  - component: {fileID: 2126508712}
   m_Layer: 9
-  m_Name: CamFollowPoint
+  m_Name: FlashLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7616538091680174337
+--- !u!4 &2126508712
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4236890431367387891}
+  m_GameObject: {fileID: 2126508711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7509768600439606718}
@@ -948,7 +948,7 @@ GameObject:
   - component: {fileID: 1711073660}
   - component: {fileID: 1711073661}
   m_Layer: 9
-  m_Name: PlayerRoot (1)
+  m_Name: PlayerRoot (1) 1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2701,7 +2701,7 @@ Transform:
   m_Children:
   - {fileID: 7509768600080527860}
   - {fileID: 7509768599842321399}
-  - {fileID: 7616538091680174337}
+  - {fileID: 2126508712}
   m_Father: {fileID: 7509768599278789172}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
