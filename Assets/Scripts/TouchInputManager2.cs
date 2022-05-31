@@ -11,7 +11,7 @@ public class TouchInputManager2 : MonoBehaviour
     [SerializeField] private Vector2 joystickSafetyZoneSize;
     [SerializeField] private float moveSpeedMult = 0.9f;
     
-
+    
     [HideInInspector] public bool shouldJump = false;
     [HideInInspector] public bool shouldCrouch = false;
     [HideInInspector] public float attkDelaySecs = 0.1f; //this will be set by the currently equipped weapon
@@ -139,7 +139,7 @@ public class TouchInputManager2 : MonoBehaviour
 		}
     }
 
-    private void Attack()
+    public void Attack()
     {
         
 	}

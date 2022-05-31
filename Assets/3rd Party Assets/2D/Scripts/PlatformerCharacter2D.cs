@@ -6,7 +6,9 @@ namespace UnityStandardAssets._2D
 {
     public class PlatformerCharacter2D : MonoBehaviour
     {
-        [SerializeField] private bool useNewPlayer = true;
+        public bool canControlFacingDirection = true;
+        [HideInInspector] public bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        [HideInInspector] public bool shouldPlayMoveBackwardAnims = false;
         [SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
         [SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
         [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -20,7 +22,8 @@ namespace UnityStandardAssets._2D
         const float k_CeilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator m_Anim;            // Reference to the player's animator component.
         private Rigidbody2D m_Rigidbody2D;
-        private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+        private float moveSpd = 0;
+        
 
         private void Awake()
         {
@@ -48,11 +51,23 @@ namespace UnityStandardAssets._2D
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+
+
+            //control whether or not we play the movingbackwards anims instead of the forward ones
+            if ((m_FacingRight == true && moveSpd < 0) || (m_FacingRight == false && moveSpd > 0))
+            {
+                m_Anim.SetBool("MovingBackwards", true);
+            }
+            else if ((m_FacingRight == true && moveSpd > 0) || (m_FacingRight == false && moveSpd < 0))
+            {
+                m_Anim.SetBool("MovingBackwards", false);
+            }
         }
 
 
         public void Move(float move, bool crouch, bool jump)
         {
+            moveSpd = move;
             // If crouching, check to see if the character can stand up
             if (!crouch && m_Anim.GetBool("Crouch"))
             {
@@ -78,17 +93,20 @@ namespace UnityStandardAssets._2D
                 // Move the character
                 m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed, m_Rigidbody2D.velocity.y);
 
-                // If the input is moving the player right and the player is facing left...
-                if (move > 0 && !m_FacingRight)
+                if (canControlFacingDirection == true)
                 {
-                    // ... flip the player.
-                    Flip();
-                }
+                    // If the input is moving the player right and the player is facing left...
+                    if (move > 0 && !m_FacingRight)
+                    {
+                        // ... flip the player.
+                        Flip();
+                    }
                     // Otherwise if the input is moving the player left and the player is facing right...
-                else if (move < 0 && m_FacingRight)
-                {
-                    // ... flip the player.
-                    Flip();
+                    else if (move < 0 && m_FacingRight)
+                    {
+                        // ... flip the player.
+                        Flip();
+                    }
                 }
             }
             // If the player should jump...

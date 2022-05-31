@@ -9,16 +9,16 @@ public class GameManager : MonoBehaviour
     public bool clickCapturedByInteractScript = false;
     public bool clickCapturedByUI = false;
     // Start is called before the first frame update
-    void Start()
-    {
+    //void Start()
+    //{
         
-    }
+    //}
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         
-    }
+    //}
 
 	private void LateUpdate()
 	{
