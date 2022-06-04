@@ -34,6 +34,7 @@ public class TimeManager : MonoBehaviour
      * 10pm = 1320
      * 11pm = 1380
      * 11:59pm = 1439*/
+    [SerializeField] private bool shouldPrintToConsole = false;
     [Min(0.001f)] public float globalTimeMult = 1;
     public int currTimeInGameMin = 270; //4:30am
     public int flashlightOnTime = 1200; //8pm
@@ -144,8 +145,11 @@ public class TimeManager : MonoBehaviour
             currHours -= 12;
 		}
 
-        string timeString = currHours.ToString() + ":" + currMins.ToString("00") + periodString;
-        print("Current Time: " + timeString + "       Minutes: " + currTimeInGameMin);
+        if (shouldPrintToConsole == true)
+        {
+            string timeString = currHours.ToString() + ":" + currMins.ToString("00") + periodString;
+            print("Current Time: " + timeString + "       Minutes: " + currTimeInGameMin);
+        }
 
         Invoke("TimeUpdate", 1 / globalTimeMult);
 	}

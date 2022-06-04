@@ -82,47 +82,23 @@ public class TouchInputManager2 : MonoBehaviour
             bool touchUsedForAttk = false;
             Touch touch1 = Input.GetTouch(0);
             if ((touch1.phase == TouchPhase.Began) &&
-                touch1.position.x > initJoyPos.x + (joystickSafetyZoneSize.x / 2) ||
-                touch1.position.x < initJoyPos.x - (joystickSafetyZoneSize.x / 2) ||
-                touch1.position.y > initJoyPos.y + (joystickSafetyZoneSize.y / 2) ||
-                touch1.position.y < initJoyPos.y - (joystickSafetyZoneSize.y / 2))
-            {
-                if (playerCanAttk == true)
-                {
-                    Attack();
-                    touchUsedForAttk = true;
-                    playerCanAttk = false;
-                    Invoke("ResetCanAttk", attkDelaySecs);
-                }
-            }
-            else
+                touch1.position.x <= initJoyPos.x + (joystickSafetyZoneSize.x / 2) ||
+                touch1.position.x >= initJoyPos.x - (joystickSafetyZoneSize.x / 2) ||
+                touch1.position.y <= initJoyPos.y + (joystickSafetyZoneSize.y / 2) ||
+                touch1.position.y >= initJoyPos.y - (joystickSafetyZoneSize.y / 2))
             {
                 Move();
             }
 
             Touch touch2 = Input.GetTouch(1);
             if ((touch2.phase == TouchPhase.Began) &&
-                touch2.position.x > initJoyPos.x + (joystickSafetyZoneSize.x / 2) ||
-                touch2.position.x < initJoyPos.x - (joystickSafetyZoneSize.x / 2) ||
-                touch2.position.y > initJoyPos.y + (joystickSafetyZoneSize.y / 2) ||
-                touch2.position.y < initJoyPos.y - (joystickSafetyZoneSize.y / 2))
-            {
-                if (playerCanAttk == true)
-                {
-                    if (touchUsedForAttk == false)
-                    {
-                        Attack();
-                        playerCanAttk = false;
-                        Invoke("ResetCanAttk", attkDelaySecs);
-                    }
-                }
-                
-            }
-            else
+                touch2.position.x <= initJoyPos.x + (joystickSafetyZoneSize.x / 2) ||
+                touch2.position.x >= initJoyPos.x - (joystickSafetyZoneSize.x / 2) ||
+                touch2.position.y <= initJoyPos.y + (joystickSafetyZoneSize.y / 2) ||
+                touch2.position.y >= initJoyPos.y - (joystickSafetyZoneSize.y / 2))
             {
                 Move();
             }
-
         }
     }
 
@@ -141,7 +117,7 @@ public class TouchInputManager2 : MonoBehaviour
 
     public void Attack()
     {
-        
+        print("Player Attack Triggered");
 	}
 
     public void OnCrouchTap()

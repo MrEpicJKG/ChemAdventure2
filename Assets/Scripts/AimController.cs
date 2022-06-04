@@ -25,7 +25,7 @@ public class AimController : MonoBehaviour
     private GameManager manager;
 	void Start()
 	{
-        manager = GameObject.Find("GameController").GetComponent<GameManager>();
+        manager = GetComponent<GameManager>();
         charControl = GameObject.Find("PlayerRoot").GetComponent<PlatformerCharacter2D>();
         TIM = GameObject.Find("GameController").GetComponent<TouchInputManager2>();
 	}
@@ -38,18 +38,21 @@ public class AimController : MonoBehaviour
 
 	public void RotatePlayer(Touch touch)
     {
+        print("Rotate Player Called");
         if (manager.isGameRunning == true)
         {
             Vector3 target = Camera.main.ScreenToWorldPoint(new Vector3(touch.position.x, touch.position.y, transform.position.z));
             Vector3 difference = target - playerUpperBody.position;
-            float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            float rotationZ = Mathf.Clamp(Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg, -maxAngleOffset, maxAngleOffset);
             Quaternion lookRot = Quaternion.Euler(0.0f, 0.0f, rotationZ);
             Quaternion halfLookRot = Quaternion.Euler(0.0f, 0.0f, rotationZ / 2);
 
-            playerUpperBody.rotation = halfLookRot;
-            playerFarUpperArm.rotation = halfLookRot;
-            playerNearUpperArm.rotation = halfLookRot;
-            playerHead.rotation = halfLookRot;
+            playerUpperBody.rotation = lookRot;
+            playerFarUpperArm.rotation = lookRot;
+            playerNearUpperArm.rotation = lookRot;
+            playerHead.rotation = lookRot;
+
+            
         }
     }
 
@@ -67,7 +70,7 @@ public class AimController : MonoBehaviour
         if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && leftBtnTrans.rect.Contains(touch.position) == true)
+            if (touch.phase == TouchPhase.Began && leftBtnTrans.rect.Contains(Camera.main.ScreenToViewportPoint(touch.position)) == true)
             {
                 RotatePlayer(touch);
                 if (canAttk == true)
@@ -82,7 +85,7 @@ public class AimController : MonoBehaviour
         else if(Input.touchCount > 1)
         {
             Touch touch = Input.GetTouch(1);
-            if (touch.phase == TouchPhase.Began && leftBtnTrans.rect.Contains(touch.position) == true)
+            if (touch.phase == TouchPhase.Began && leftBtnTrans.rect.Contains(Camera.main.ScreenToViewportPoint(touch.position)) == true)
             {
                 RotatePlayer(touch);
                 if (canAttk == true)
@@ -109,7 +112,7 @@ public class AimController : MonoBehaviour
         if (Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began && rightBtnTrans.rect.Contains(touch.position) == true)
+            if (touch.phase == TouchPhase.Began && rightBtnTrans.rect.Contains(Camera.main.ScreenToViewportPoint(touch.position)) == true)
             {
                 RotatePlayer(touch);
                 if (canAttk == true)
@@ -124,7 +127,7 @@ public class AimController : MonoBehaviour
         else if (Input.touchCount > 1)
         {
             Touch touch = Input.GetTouch(1);
-            if (touch.phase == TouchPhase.Began && rightBtnTrans.rect.Contains(touch.position) == true)
+            if (touch.phase == TouchPhase.Began && rightBtnTrans.rect.Contains(Camera.main.ScreenToViewportPoint(touch.position)) == true)
             {
                 RotatePlayer(touch);
                 if (canAttk == true)

@@ -30,14 +30,14 @@ public class Item : MonoBehaviour
 
     //Junk has no additional vars
     [Header("--- Quest ---")]
-    public NPC giverNpc = new NPC();
-    public NPC recieverNpc = new NPC();
+    public NPC giverNpc;// = new NPC();
+    public NPC recieverNpc;// = new NPC();
     public string questName = "";
     [Multiline] public string questDesc = "";
     public QuestType questType = QuestType.GetItems;
     public List<Item> itemsToGet = new List<Item>();
-    public Room roomToClear = new Room();
-    public NPC npcToTalkTo = new NPC();
+    public Room roomToClear;// = new Room();
+    public NPC npcToTalkTo;// = new NPC();
 
 
 

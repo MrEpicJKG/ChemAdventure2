@@ -4001,6 +4001,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canControlFacingDirection: 1
+  m_FacingRight: 1
+  shouldPlayMoveBackwardAnims: 0
   m_MaxSpeed: 10
   m_JumpForce: 600
   m_CrouchSpeed: 0.25
@@ -9878,6 +9880,7 @@ GameObject:
   - component: {fileID: 1203055585}
   - component: {fileID: 1203055584}
   - component: {fileID: 1203055583}
+  - component: {fileID: 1203055586}
   m_Layer: 5
   m_Name: RightAttkBtn
   m_TagString: Untagged
@@ -9986,6 +9989,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203055581}
   m_CullTransparentMesh: 1
+--- !u!114 &1203055586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203055581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1234500306}
+          m_TargetAssemblyTypeName: AimController, Assembly-CSharp
+          m_MethodName: OnRightAttkTap
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1210586187
 GameObject:
   m_ObjectHideFlags: 0
@@ -10278,6 +10310,7 @@ GameObject:
   - component: {fileID: 1234500303}
   - component: {fileID: 1234500304}
   - component: {fileID: 1234500305}
+  - component: {fileID: 1234500306}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -10419,6 +10452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd0e093a5017e24eb31c70ed7f883ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldPrintToConsole: 0
   globalTimeMult: 1
   currTimeInGameMin: 270
   flashlightOnTime: 1230
@@ -10430,6 +10464,29 @@ MonoBehaviour:
   globalLight: {fileID: 1065435873}
   outsideLight: {fileID: 1556026916}
   flashLight: {fileID: 1525113008}
+--- !u!114 &1234500306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234500299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0baf27bcfa6ed974a97534c9581dda7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attkDelaySecs: 0.25
+  canControlFacingDirectionDelaySecs: 0.5
+  playerRoot: {fileID: 7509768599230260955}
+  playerUpperBody: {fileID: 7509768599230260954}
+  playerNearUpperArm: {fileID: 7509768599230260953}
+  playerFarUpperArm: {fileID: 7509768599230260952}
+  playerHead: {fileID: 7509768599230260951}
+  leftBtnTrans: {fileID: 1505072608}
+  rightBtnTrans: {fileID: 1203055582}
+  maxAngleOffset: 30
+  usingRangedWeapon: 0
 --- !u!1 &1263688416
 GameObject:
   m_ObjectHideFlags: 0
@@ -12412,6 +12469,7 @@ GameObject:
   - component: {fileID: 1505072611}
   - component: {fileID: 1505072610}
   - component: {fileID: 1505072609}
+  - component: {fileID: 1505072612}
   m_Layer: 5
   m_Name: LeftAttkBtn
   m_TagString: Untagged
@@ -12520,6 +12578,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505072607}
   m_CullTransparentMesh: 1
+--- !u!114 &1505072612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505072607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1234500306}
+          m_TargetAssemblyTypeName: AimController, Assembly-CSharp
+          m_MethodName: OnLeftAttkTap
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1519152558
 GameObject:
   m_ObjectHideFlags: 0
@@ -17216,5 +17303,30 @@ PrefabInstance:
 --- !u!4 &7509768599230260950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7616538091680174337, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
+  m_PrefabInstance: {fileID: 7509768599230260949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7509768599230260951 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7509768598787925744, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
+  m_PrefabInstance: {fileID: 7509768599230260949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7509768599230260952 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7509768600181715036, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
+  m_PrefabInstance: {fileID: 7509768599230260949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7509768599230260953 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7509768599351136883, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
+  m_PrefabInstance: {fileID: 7509768599230260949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7509768599230260954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7509768599740034259, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
+  m_PrefabInstance: {fileID: 7509768599230260949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7509768599230260955 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7509768599278789172, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
   m_PrefabInstance: {fileID: 7509768599230260949}
   m_PrefabAsset: {fileID: 0}
