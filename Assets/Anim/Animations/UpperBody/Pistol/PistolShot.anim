@@ -815,7 +815,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -825,7 +825,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -835,37 +835,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.z
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -905,7 +875,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -915,7 +885,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -925,27 +895,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.x
-    path: FarUpperArmHiddenJoint_Code/PlayerFarUpperArm
-    classID: 4
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve: []
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_LocalEulerAngles.y
-    path: FarUpperArmHiddenJoint_Code/PlayerFarUpperArm
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -956,6 +906,56 @@ AnimationClip:
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
     path: FarUpperArmHiddenJoint_Code/PlayerFarUpperArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: FarUpperArmHiddenJoint_Code/PlayerFarUpperArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: FarUpperArmHiddenJoint_Code/PlayerFarUpperArm
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.x
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.y
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalEulerAngles.z
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0
