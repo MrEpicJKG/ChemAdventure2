@@ -230,7 +230,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder/Pistol/FiringLight
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder/SemiPistol1/FiringLight
     classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -277,7 +277,7 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 137169833
+      path: 3665401511
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -903,7 +903,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder/Pistol/FiringLight
+    path: NearUpperArmHiddenJoint_Code/PlayerNearUpperArm/PlayerNearLowerArm/WeaponPlaceholder/SemiPistol1/FiringLight
     classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:

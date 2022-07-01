@@ -578,73 +578,73 @@ AnimatorStateMachine:
     m_Position: {x: 410, y: -550, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2796509588645129588}
-    m_Position: {x: 890, y: -540, z: 0}
+    m_Position: {x: 810, y: -1480, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2803518460366180006}
-    m_Position: {x: 1070, y: -110, z: 0}
+    m_Position: {x: 1400, y: -290, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -382103637178961252}
-    m_Position: {x: 1130, y: -580, z: 0}
+    m_Position: {x: 1180, y: -1580, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4829134333038105146}
-    m_Position: {x: 1130, y: -490, z: 0}
+    m_Position: {x: 1180, y: -1380, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8661647197655372317}
-    m_Position: {x: 1340, y: -150, z: 0}
+    m_Position: {x: 1670, y: -330, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 339725088639624926}
-    m_Position: {x: 1340, y: -40, z: 0}
+    m_Position: {x: 1670, y: -220, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5399824877672742007}
-    m_Position: {x: 1340, y: -220, z: 0}
+    m_Position: {x: 1670, y: -400, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2210632365893421129}
-    m_Position: {x: 1620, y: -100, z: 0}
+    m_Position: {x: 1950, y: -280, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3037336263068361555}
-    m_Position: {x: 1130, y: -320, z: 0}
+    m_Position: {x: 1480, y: -690, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1162689327461421833}
-    m_Position: {x: 1130, y: -410, z: 0}
+    m_Position: {x: 1480, y: -780, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1513378707205906616}
-    m_Position: {x: 890, y: -370, z: 0}
+    m_Position: {x: 1240, y: -740, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7727366002949701414}
-    m_Position: {x: 840, y: 50, z: 0}
+    m_Position: {x: 1000, y: -10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1602951472418330779}
-    m_Position: {x: 1080, y: 10, z: 0}
+    m_Position: {x: 1240, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2275195646589204064}
-    m_Position: {x: 1080, y: 100, z: 0}
+    m_Position: {x: 1240, y: 40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6074548521221343144}
-    m_Position: {x: 1090, y: 200, z: 0}
+    m_Position: {x: 1480, y: 250, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6969677482887139541}
-    m_Position: {x: 1330, y: 160, z: 0}
+    m_Position: {x: 1720, y: 210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6169987689506383447}
-    m_Position: {x: 1330, y: 250, z: 0}
+    m_Position: {x: 1720, y: 300, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1470490428031897482}
-    m_Position: {x: 1080, y: 570, z: 0}
+    m_Position: {x: 1140, y: 970, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 5276962781952993395}
-    m_Position: {x: 1080, y: 480, z: 0}
+    m_Position: {x: 1140, y: 880, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2199899361289322432}
-    m_Position: {x: 840, y: 520, z: 0}
+    m_Position: {x: 900, y: 920, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6666780656569036995}
-    m_Position: {x: 1070, y: 390, z: 0}
+    m_Position: {x: 1320, y: 600, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5667433919134429257}
-    m_Position: {x: 1070, y: 300, z: 0}
+    m_Position: {x: 1320, y: 510, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3869880387313838070}
-    m_Position: {x: 830, y: 340, z: 0}
+    m_Position: {x: 1080, y: 550, z: 0}
   m_ChildStateMachines:
   - serializedVersion: 1
     m_StateMachine: {fileID: -171171573025383836}
@@ -1503,7 +1503,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PistolIdle (Gun Type 0)
+  m_Name: PistolIdleStill (Gun Type 0)
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -2213,67 +2213,97 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: EquippedWeaponType
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: GunType
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isMeleeHeavy
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: isAttacking
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ShouldMeleeSwingUnderhand
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: AmmoLeft
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: IsPumpShotgun
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ShouldReload
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: ClipsLeft
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: CanAttk
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: isMoving
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isCrouched
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isRunning
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: isAirborne
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: secsSinceLastShot
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
