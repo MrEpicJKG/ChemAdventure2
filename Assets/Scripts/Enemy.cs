@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float health = 20;
+    //add more here
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Start is called before the first frame update
+    //void Start()
+    //{
         
-    }
+    //}
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+        
+    //}
+
+    [HideInInspector] public void RecieveDamage(float damage)
+    {
+        health = Mathf.Clamp(health - damage, 0, Mathf.Infinity);
+        if(health == 0)
+        {
+            print("Enemy Killed");
+            gameObject.SetActive(false); //replace this with death anim
+		}
+	}
 }
