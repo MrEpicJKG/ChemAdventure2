@@ -10433,6 +10433,7 @@ GameObject:
   - component: {fileID: 1234500304}
   - component: {fileID: 1234500305}
   - component: {fileID: 1234500306}
+  - component: {fileID: 1234500307}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -10609,6 +10610,93 @@ MonoBehaviour:
   rightBtnTrans: {fileID: 1203055582}
   maxAngleOffset: 30
   usingRangedWeapon: 0
+--- !u!114 &1234500307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1234500299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d30f082b9a927d4fa076ab459db5635, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 7509768599230260957}
+  unarmedIdle: {fileID: 7400000, guid: e0e047d4b1e63c840a246c8cb4131848, type: 2}
+  unarmedPunch: {fileID: 7400000, guid: 68d6779f12c6238499dc4942b662d6b5, type: 2}
+  meleeLightIdleStill: {fileID: 7400000, guid: ac85574d63d3c5b4884bffcbc7b446bc, type: 2}
+  meleeLightSwingOverhead: {fileID: 7400000, guid: 863d63c86dc0ee0499c4cd2269242ae7, type: 2}
+  meleeLightSwingUnderhand: {fileID: 7400000, guid: bbfe2854992b58e42b5c5a8c486a64a9, type: 2}
+  meleeLightIdleCrouch: {fileID: 7400000, guid: 921ce8fc1e7602a4b8f10c580038d02f, type: 2}
+  meleeLightIdleRun: {fileID: 7400000, guid: 5b78dfd7dee83184ea342782010683e6, type: 2}
+  meleeLightIdleWalk: {fileID: 7400000, guid: 4bc3d561e6c15bd4bb223549cd0b14f2, type: 2}
+  meleeHeavyIdleStill: {fileID: 7400000, guid: 102707c16b4c59442bcff69f8a8c08f2, type: 2}
+  meleeHeavySwingOverhead: {fileID: 7400000, guid: 965bcd8798fabbb429cfdc3304951732, type: 2}
+  meleeHeavySwingUnderhand: {fileID: 7400000, guid: aa3a67a0ba54c5d448233f759d7c79bf, type: 2}
+  meleeHeavyIdleCrouch: {fileID: 7400000, guid: 0c22091101e27bf4cba542570c58ca1a, type: 2}
+  meleeHeavyIdleRun: {fileID: 7400000, guid: 4772efe2f637dac40a8fef65dea3e58d, type: 2}
+  meleeHeavyIdleWalk: {fileID: 7400000, guid: cd72a57a6c4b77740a203eaeedada752, type: 2}
+  pistolIdleStill: {fileID: 7400000, guid: 12254cc3553fe5a489443259906f80a4, type: 2}
+  pistolReload: {fileID: 7400000, guid: a26a2c425e799bd4da16161a02e9f887, type: 2}
+  pistolShot: {fileID: 7400000, guid: 3285c4d6fc4f5f4428e36c89ae6e47c4, type: 2}
+  pistolIdleCrouch: {fileID: 7400000, guid: 8b7fd01b4635a2348ab524ed32f82d2c, type: 2}
+  pistolIdleGunUp: {fileID: 7400000, guid: 99f0d5e2df2221048937f9605dae4a3b, type: 2}
+  pistolIdleRun: {fileID: 7400000, guid: a6de01a3056104e45aed8650840963cf, type: 2}
+  pistolIdleWalk: {fileID: 7400000, guid: b27828b501ca900458c523c242c82e8b, type: 2}
+  smgIdleStill: {fileID: 7400000, guid: dd19464125ad3064386f70e4ace8d1d8, type: 2}
+  smgReload: {fileID: 7400000, guid: 95b8ef47734b7a746afa0f5203b6555d, type: 2}
+  smgShot: {fileID: 7400000, guid: 20df5134acf3ff64ab8bf1b6588881ad, type: 2}
+  smgIdleCrouch: {fileID: 7400000, guid: 80b0c2579a8d2b74580d5121d9aa5444, type: 2}
+  smgIdleGunUp: {fileID: 7400000, guid: 305d38e14e5e09c4e853995f35e3b735, type: 2}
+  smgIdleRun: {fileID: 7400000, guid: 267178de646d826409605988ca22d210, type: 2}
+  smgIdleWalk: {fileID: 7400000, guid: 550eb05ca60737d4bba991e20326049e, type: 2}
+  rifleIdleStill: {fileID: 7400000, guid: 0c6ba205cda290c469df48798329b2a3, type: 2}
+  rifleReload: {fileID: 7400000, guid: 88aa0fdd8aa5fab41b762b0186e816ba, type: 2}
+  rifleShot: {fileID: 7400000, guid: 157f166d7edf60b4696a7d6324051634, type: 2}
+  rifleIdleCrouch: {fileID: 7400000, guid: dd9f41a2b91afd54da2a9fefd3a17f03, type: 2}
+  rifleIdleGunUp: {fileID: 7400000, guid: 15f7798c7c40aca4eb28dff3cdbc690e, type: 2}
+  rifleIdleRun: {fileID: 7400000, guid: 61375e075d4aaa54eb8b7752ef218f7d, type: 2}
+  rifleIdleWalk: {fileID: 7400000, guid: cb86b9d38b0bea2449e398bdfff16828, type: 2}
+  bullpupIdleStill: {fileID: 7400000, guid: e2ccc4964c50dda4b9a1fcbfe941279c, type: 2}
+  bullpupReload: {fileID: 7400000, guid: f88cdd6459ddbce44b90729c75effb80, type: 2}
+  bullpupShot: {fileID: 7400000, guid: 71ccc59a1ec7ce246a219211f31958b5, type: 2}
+  bullpupIdleCrouch: {fileID: 7400000, guid: 090e46a1b1e1c36409aabc08de98e865, type: 2}
+  bullpupIdleGunUp: {fileID: 7400000, guid: 4f3cf9d132bbc52409768b827da667bc, type: 2}
+  bullpupIdleRun: {fileID: 7400000, guid: 8612b3b356303b94583e02ba0d727b24, type: 2}
+  bullpupIdleWalk: {fileID: 7400000, guid: 7347be5419f250440a1932db21cfa812, type: 2}
+  shotgunIdleStill: {fileID: 7400000, guid: 2e1703c5f24c2924795ed08aaf87ecf0, type: 2}
+  shotgunReloadShell: {fileID: 7400000, guid: dbf01aa3799fb7941b0a2e3911ca7f7e, type: 2}
+  shotgunReloadClip: {fileID: 7400000, guid: e5c61e9483c606144bb474fda237fc02, type: 2}
+  shotgunPump: {fileID: 7400000, guid: 192c447c16f11314c8a239b23e0609c4, type: 2}
+  shotgunShot: {fileID: 7400000, guid: 788b4cd428ff95b449bb05d185bbc707, type: 2}
+  shotgunIdleCrouch: {fileID: 7400000, guid: 6b5187ad1ea4b3742bbe28ff2ee5b5ed, type: 2}
+  shotgunIdleGunUp: {fileID: 7400000, guid: bca0c88291e73a946abb68a84b1713fc, type: 2}
+  shotgunIdleRun: {fileID: 7400000, guid: e7c38b708cddcf042a35466fac9813d5, type: 2}
+  shotgunIdleWalk: {fileID: 7400000, guid: 6b348bddfcff41349966ce8ff46ae601, type: 2}
+  rpgIdleStill: {fileID: 7400000, guid: 368a86391c007054fa07a59b2303a4b1, type: 2}
+  rpgReload: {fileID: 7400000, guid: f01ff75b31f94fb41a1e18bd7aa85520, type: 2}
+  rpgShot: {fileID: 7400000, guid: de2acef8a10cd5a40957b47d788b0bc2, type: 2}
+  rpgIdleCrouch: {fileID: 7400000, guid: cc1937b419a2c014d91ab1c055d28ab6, type: 2}
+  rpgIdleGunUp: {fileID: 7400000, guid: 57e68fe0be30cb04480ff4ca896ebd59, type: 2}
+  rpgIdleRun: {fileID: 7400000, guid: e818beca7173f8948a2de495f4c75ec8, type: 2}
+  rpgIdleWalk: {fileID: 7400000, guid: 973e7e2b46d0df746bc4d3601215105e, type: 2}
+  minigunIdleStill: {fileID: 7400000, guid: 9589888486387f3479f3478f9762fea9, type: 2}
+  minigunReload: {fileID: 7400000, guid: 5216e74673f9a3e40baccef84d147628, type: 2}
+  minigunShot: {fileID: 7400000, guid: 67f3d5338bddc3f4ba44be5ae7ff6608, type: 2}
+  minigunIdleGunUp: {fileID: 7400000, guid: db8fb183d6a1f0c4d9534457d294d52b, type: 2}
+  minigunIdleRun: {fileID: 7400000, guid: 20e472c181a980a4c8ba2ec7f7143b4b, type: 2}
+  minigunIdleWalk: {fileID: 7400000, guid: 6b89d1c3d81bdac47b1ea49a6c3d0c6e, type: 2}
+  isMeleeHeavy: 0
+  ammoLeft: 0
+  clipsLeft: 0
+  isPumpShotgun: 0
+  canAttk: 1
+  isMoving: 0
+  isCrouched: 0
+  isRunning: 0
+  isAirborne: 0
+  secsSinceLastShot: 0
 --- !u!1 &1263688416
 GameObject:
   m_ObjectHideFlags: 0
@@ -17419,5 +17507,10 @@ Transform:
 --- !u!4 &7509768599230260956 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9099414144392603468, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
+  m_PrefabInstance: {fileID: 7509768599230260949}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &7509768599230260957 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 6091291308335751143, guid: bd6f7b2578417db40ba07f1fa65187a5, type: 3}
   m_PrefabInstance: {fileID: 7509768599230260949}
   m_PrefabAsset: {fileID: 0}
